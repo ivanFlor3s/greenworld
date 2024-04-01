@@ -1,22 +1,28 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Rubik } from 'next/font/google';
+import './globals.css';
+import { Nav } from '../components/Nav';
+import { Footer } from '@/components/Footer';
 
-const inter = Inter({ subsets: ["latin"] });
+const rubik = Rubik({ subsets: ['latin'], weight: ['300','400', '500','700'] });
 
 export const metadata: Metadata = {
-  title: "🌱 Green World",
-  description: "A green world for a better tomorrow",
+    title: '🌱 Green World',
+    description: 'A green world for a better tomorrow',
 };
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body className={inter.className + " bg-background-500"}>{children}</body>
-    </html>
-  );
+    return (
+        <html lang="en">
+            <body className={rubik.className + ' bg-background-500 container mx-auto my-4' }>
+              <Nav></Nav>
+              {children}
+              <Footer></Footer>
+            </body>
+        </html>
+    );
 }
