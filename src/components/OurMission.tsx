@@ -9,7 +9,7 @@ export const OurMission = () => {
             <div>
                 <p className=" text-balance w-[40ch] mx-auto">Our mission is to support and empower local gardening efforts and give the community an opportunity to grow healthy, organic food.</p>
             </div>
-            <div className="flex flex-row gap-3">
+            <div className="flex flex-col md:flex-row gap-3">
                 <div className="text-center border-2 border-teal-900 bg-background-200 text-text p-3">
                     <CiHeart className="mx-auto text-7xl mb-6 text-teal-800" />
                     <h3 className="text-xl">Donate</h3>
