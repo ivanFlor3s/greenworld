@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={rubik.className + ' bg-background-500 container mx-auto my-4' }>
+            <body className={rubik.className + ' bg-background-500 container mx-auto my-4 text-text' }>
               <Nav></Nav>
               {children}
               <Footer></Footer>
